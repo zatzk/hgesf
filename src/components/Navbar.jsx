@@ -84,9 +84,11 @@ export const Navbar = () => {
             icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5}/>}
             />
         
-
-          {isOpen ? (
-            <Box pb={4} ml={2} display={{ base:'inline-block', md: "none" }}>
+          </Flex>
+        </HStack>
+      </Container>
+      {isOpen ? (
+            <Box pb={4} ml={2} justifyContent="end" display={{ base:'flex', md: "none" }}>
                 <Stack as={"nav"} spacing={4}>
                   {Links.map(({ name, path }) => (
                     <Button>
@@ -98,10 +100,6 @@ export const Navbar = () => {
                 </Stack>
               </Box>
             ) : null}
-          </Flex>
-        </HStack>
-      </Container>
-        
       
     </Box>
   );
