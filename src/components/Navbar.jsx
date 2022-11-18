@@ -4,8 +4,6 @@ import { Box, HStack, Stack, Flex, Text, Button, IconButton, useDisclosure, Cont
 import {
   HamburgerIcon,
   CloseIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
 } from '@chakra-ui/icons';
 
 
@@ -63,7 +61,7 @@ export const Navbar = () => {
               
           {Links.map(({ name, path }) => (
               <Button>
-                <Link key={path} to={path}>
+                <Link key={name.toString()} to={path}>
                   {name}
                 </Link>
               </Button>
@@ -92,7 +90,7 @@ export const Navbar = () => {
                 <Stack as={"nav"} spacing={4}>
                   {Links.map(({ name, path }) => (
                     <Button>
-                        <Link key={path} to={path}>
+                        <Link key={name.toString()} to={path}>
                           {name}
                         </Link>
                       </Button>
