@@ -44,12 +44,16 @@ export const Card = ({...props}) => {
     >
       <Flex
         justifyContent="center"
+        alignItems={"center"}
+        height={10}
       >
       {props.icon}
       </Flex>
       
       <Flex
-      justifyContent="center"
+        justifyContent="center"
+        alignItems={"center"}
+        height={10}
       >
       {props.title}
 
