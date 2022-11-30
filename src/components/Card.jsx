@@ -1,4 +1,4 @@
-import { Flex, Box } from "@chakra-ui/react";
+import { Flex, Box,  } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React from "react";
 
@@ -15,7 +15,7 @@ const boxCardVariants = {
   
 }
 
-export const Card = () => {
+export const Card = ({...props}) => {
 
   return (
     <motion.div
@@ -29,7 +29,8 @@ export const Card = () => {
       }}
   >
     <Flex
-      bgColor="blue"
+      border="2px"
+      borderColor="blue"
       margin= "0.9rem"
       padding= "20px"
       width= "9.5rem"
@@ -38,8 +39,21 @@ export const Card = () => {
       borderStyle="solid"
       cursor="pointer"
       bgClip="padding-box"
+      display="inline-block"
+      justifyContent="center"
     >
-      teste
+      <Flex
+        justifyContent="center"
+      >
+      {props.icon}
+      </Flex>
+      
+      <Flex
+      justifyContent="center"
+      >
+      {props.title}
+
+      </Flex>
     </Flex>
   </motion.div>
   );

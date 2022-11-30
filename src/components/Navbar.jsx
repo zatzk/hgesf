@@ -5,7 +5,7 @@ import {
   HamburgerIcon,
   CloseIcon,
 } from '@chakra-ui/icons';
-
+import { Logo } from "./Logo";
 
 
 const Links = [
@@ -38,7 +38,7 @@ export const Navbar = () => {
       <Container
         display="flex"
         p={2}
-        maxW="container.lg"
+        maxW="container.xl"
         alignContent="center"
         justifyContent="space-between"
         fontFamily="primary"
@@ -48,7 +48,7 @@ export const Navbar = () => {
       >
 
         <Text h="50px" display="inline-flex" alignItems="center">
-          HGESF
+          <Logo/>
         </Text>
         
         <HStack spacing={8} alignItems={"center"}>
@@ -85,6 +85,7 @@ export const Navbar = () => {
           </Flex>
         </HStack>
       </Container>
+      
       {isOpen ? (
             <Box pb={4} ml={2} justifyContent="end" display={{ base:'flex', md: "none" }}>
                 <Stack as={"nav"} spacing={4}>
@@ -98,7 +99,6 @@ export const Navbar = () => {
                 </Stack>
               </Box>
             ) : null}
-      
     </Box>
   );
 };
