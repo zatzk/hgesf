@@ -7,9 +7,11 @@ export default [
   {
     title: 'CHAMADOS',
     icon: <SlBubble size={28}/>,
+    link: 'vazio',
   },
   {
-    title: 'teste 2',
-    icon: <SlBubble/>,
+    title: 'TESTE',
+    icon: <SlBubble size={28}/>,
+    link: 'vazio',
   },
 ]

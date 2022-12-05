@@ -17,10 +17,6 @@ const Links = [
     name: "Other",
     path: "/other",
   },
-  {
-    name: "Not Found",
-    path: "/*",
-  },
   
 ];
 export const Navbar = () => {

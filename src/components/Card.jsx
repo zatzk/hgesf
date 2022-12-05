@@ -9,16 +9,24 @@ const boxCardVariants = {
   hover: {
     opacity: 1,
     scale: 1.02,
-    y: -10,
+    y: -5,
     borderRadius: "5px",
   },
   
+}
+const colorCardVariants = {
+  initial: {
+    opacity: 1
+  },
+  hover: {
+    color: "white"
+  }
 }
 
 export const Card = ({...props}) => {
 
   return (
-    <motion.div
+    <motion.div 
       initial="initial"
       whileHover="hover"
       whileTap="hover"
@@ -28,8 +36,8 @@ export const Card = ({...props}) => {
         delay: 0.15,
       }}
   >
-    <Flex
-      border="2px"
+    <Flex 
+      border="1.2px"
       borderColor="blue"
       margin= "0.9rem"
       padding= "20px"
@@ -41,13 +49,21 @@ export const Card = ({...props}) => {
       bgClip="padding-box"
       display="inline-block"
       justifyContent="center"
+      color={"blue"}
+      _hover={{color:"white", bg:"blue"}}
     >
       <Flex
         justifyContent="center"
         alignItems={"center"}
         height={10}
+
+        
+        whileHover="hover"
+        variants={colorCardVariants}
       >
-      {props.icon}
+        <Box >
+          {props.icon}
+        </Box>
       </Flex>
       
       <Flex
