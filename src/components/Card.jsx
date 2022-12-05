@@ -56,8 +56,7 @@ export const Card = ({...props}) => {
         justifyContent="center"
         alignItems={"center"}
         height={10}
-
-        
+        my={1}
         whileHover="hover"
         variants={colorCardVariants}
       >
@@ -70,8 +69,11 @@ export const Card = ({...props}) => {
         justifyContent="center"
         alignItems={"center"}
         height={10}
+        my={1}
       >
-      {props.title}
+        <Box>
+          {props.title}
+        </Box>
 
       </Flex>
     </Flex>

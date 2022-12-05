@@ -1,13 +1,15 @@
 import React from "react";
 import { Navbar } from "../components/Navbar";
 import { Cardbar } from "../components/Cardbar"
+import { Container } from "../components/Container";
+
 export const Home = () => {
   return (
 
-  <div>
+  <Container height="100%" >
     <Navbar/>
     <Cardbar/>
-  </div>
+  </Container>
   
   );
 };

@@ -56,11 +56,11 @@ export const Navbar = () => {
           >
               
           {Links.map(({ name, path }) => (
-              <Button>
-                <Link key={name.toString()} to={path}>
+              <Link key={name.toString()} to={path}>
+                <Button>
                   {name}
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             ))}
           </HStack>
               
